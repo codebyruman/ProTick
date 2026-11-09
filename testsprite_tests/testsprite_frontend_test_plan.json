@@ -1,0 +1,560 @@
+[
+  {
+    "id": "TC001",
+    "title": "Proceed to final submission from review and reach the locked receipt",
+    "description": "This test verifies that a candidate can review the exam, confirm irreversible submission, and land on the locked post-submission receipt.",
+    "category": "Main Examination Workspace",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /exam"
+      },
+      {
+        "type": "action",
+        "description": "Open the review dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the final submission"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the post-submission receipt is displayed and the session is locked"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Confirm final submission from the review dashboard",
+    "description": "This test verifies that the review dashboard can complete the irreversible submission flow and move the user to the locked post-submission screen.",
+    "category": "Review & Submit Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the review dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the submission proceed action"
+      },
+      {
+        "type": "action",
+        "description": "Click the confirm final submission action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the locked post-submission screen is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a submission receipt is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Answer a question and advance with autosave",
+    "description": "This test verifies that selecting an answer and using Save & Next advances to the next question while preserving the response.",
+    "category": "Main Examination Workspace",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /exam"
+      },
+      {
+        "type": "action",
+        "description": "Select an answer for the current question"
+      },
+      {
+        "type": "action",
+        "description": "Save the response and move to the next question"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the next question is displayed and the saved answer is retained"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Complete candidate login with offline verification",
+    "description": "This test verifies that a student can enter valid identity details, pass offline verification, and reach the instructions waiting page.",
+    "category": "Authorized Student Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the University Seat Number field with a valid 10-digit value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the date of birth field with a valid date"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify offline verification succeeds and the instructions waiting page is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Start the exam after release and consent",
+    "description": "This test verifies that a candidate can use the release option, accept consent, and start the timed exam from the instructions page.",
+    "category": "Instruction & Waiting Page",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /instructions"
+      },
+      {
+        "type": "action",
+        "description": "Use the release paper now control"
+      },
+      {
+        "type": "action",
+        "description": "Accept the consent requirement"
+      },
+      {
+        "type": "action",
+        "description": "Start the examination"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the exam workspace is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Review the locked completion receipt",
+    "description": "This test verifies that the post-submission screen shows the locked completion state with an audit receipt and verified response ledger.",
+    "category": "Post-Submission Hard-Locked Kiosk",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the post-submission screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the locked completion state is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an audit receipt and verified response ledger are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Inspect the review dashboard summary",
+    "description": "This test verifies that the review dashboard shows the reconciliation summary needed before final submission.",
+    "category": "Review & Submit Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the review dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify answered, unanswered, and marked-for-review tallies are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the submission summary overview is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Read candidate details and wait for release on instructions page",
+    "description": "This test verifies that the instructions page shows candidate identity details and only allows starting after consent and release conditions are satisfied.",
+    "category": "Instruction & Waiting Page",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /instructions"
+      },
+      {
+        "type": "action",
+        "description": "Verify the candidate identity card is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Verify the countdown or release state is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the instructions waiting page presents the required exam-start gating information"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Cancel final submission and return to the exam",
+    "description": "This test verifies that a user can open the irreversible submission confirmation and cancel back to the exam workspace without submitting.",
+    "category": "Review & Submit Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the review dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the submission proceed action"
+      },
+      {
+        "type": "action",
+        "description": "Click the cancel action in the confirmation modal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the exam workspace is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Switch to the exam workspace from the dock",
+    "description": "This test verifies that the persistent screen switcher can take a tester directly to the exam workspace for UI verification.",
+    "category": "Stitch Screens Switcher",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the exam workspace"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the exam workspace is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "Enter the review dashboard through emergency final submit",
+    "description": "This test verifies that the emergency final submit path takes the candidate from the exam workspace to the review dashboard.",
+    "category": "Main Examination Workspace",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /exam"
+      },
+      {
+        "type": "action",
+        "description": "Click the emergency final submit control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the review dashboard is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Block login until identity details are complete",
+    "description": "This test verifies that incomplete or invalid identity details prevent login and keep the candidate on the login screen.",
+    "category": "Authorized Student Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the University Seat Number field with fewer than 10 characters"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the date of birth field with an incomplete value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation feedback is shown and login remains blocked on the login screen"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Reset the demo session from the dock",
+    "description": "This test verifies that the persistent screen switcher can reset the current session and return the app to the login screen.",
+    "category": "Stitch Screens Switcher",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock reset action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the login screen is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Remain locked after attempting restricted navigation",
+    "description": "This test verifies that the post-submission kiosk remains locked when a user attempts restricted browser navigation actions.",
+    "category": "Post-Submission Hard-Locked Kiosk",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the post-submission screen"
+      },
+      {
+        "type": "action",
+        "description": "Press the browser refresh shortcut"
+      },
+      {
+        "type": "action",
+        "description": "Press the browser back shortcut"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the locked completion state is still displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Mark a question for review and jump from the question matrix",
+    "description": "This test verifies that a candidate can mark a question for review and use the question matrix to jump directly to another question.",
+    "category": "Main Examination Workspace",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /exam"
+      },
+      {
+        "type": "action",
+        "description": "Mark the current question for review"
+      },
+      {
+        "type": "action",
+        "description": "Open the question matrix"
+      },
+      {
+        "type": "action",
+        "description": "Select a different question number from the matrix"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected question opens and the review status is preserved"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Log a visibility change incident during the exam",
+    "description": "This test verifies that the exam records a security incident when the page loses visibility and returns without losing progress.",
+    "category": "Main Examination Workspace",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /exam"
+      },
+      {
+        "type": "action",
+        "description": "Trigger a visibility change away from the exam window"
+      },
+      {
+        "type": "action",
+        "description": "Return focus to the exam"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a security incident notice is displayed and the exam state is preserved"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Verify the exam matrix is reachable from the review flow",
+    "description": "This test verifies that the review dashboard can return the user directly to the exam matrix for continued editing.",
+    "category": "Review & Submit Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the review dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the jump to matrix action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the exam matrix is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC018",
+    "title": "Jump directly to the post-submission view from the dock",
+    "description": "This test verifies that the stitch screen switcher can open the final locked view directly for design verification without completing the exam flow.",
+    "category": "Stitch Screens Switcher",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the post-submission screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the post-submission view is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the submission lock state is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Open invigilator assistance from login",
+    "description": "This test verifies that a candidate can request invigilator help from the login screen and see the assistance confirmation state.",
+    "category": "Authorized Student Login",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Click the invigilator assistance control"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the assistance request"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an assistance confirmation is displayed for the assigned terminal"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC020",
+    "title": "Inspect the login screen from the dock",
+    "description": "This test verifies that the persistent dock can bring a tester back to the login view for starting a candidate session.",
+    "category": "Stitch Screens Switcher",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /app"
+      },
+      {
+        "type": "action",
+        "description": "Click the dock option for the login screen"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the login screen is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC021",
+    "title": "Prevent exam start before countdown ends",
+    "description": "This test verifies that the exam cannot be started while the release countdown is still active, even after consent is accepted.",
+    "category": "Instruction & Waiting Page",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /instructions"
+      },
+      {
+        "type": "action",
+        "description": "Accept the consent requirement"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to start the examination before release"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the start action is blocked and the instructions page remains visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC022",
+    "title": "Keep the first question stable when Previous is unavailable",
+    "description": "This test verifies that the Previous control is unavailable on the first question and the candidate remains on Question 1.",
+    "category": "Main Examination Workspace",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /exam"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Previous control is disabled on the first question and Question 1 remains displayed"
+      }
+    ],
+    "priority": "Low"
+  }
+]
