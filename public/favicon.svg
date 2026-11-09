@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="protick-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1E3B" />
+      <stop offset="50%" stop-color="#123B70" />
+      <stop offset="100%" stop-color="#1E56A0" />
+    </linearGradient>
+    <linearGradient id="protick-check" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="92" height="92" rx="24" fill="url(#protick-bg)" />
+  <path d="M28 52 L43 67 L74 34" stroke="url(#protick-check)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="76" cy="24" r="4.5" fill="#34D399" />
+</svg>

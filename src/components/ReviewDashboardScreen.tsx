@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Question, StudentProfile } from '../types/exam';
+import { ProTickLogo } from './ProTickLogo';
 
 interface ReviewDashboardScreenProps {
   student: StudentProfile;
@@ -50,11 +51,7 @@ export const ReviewDashboardScreen: React.FC<ReviewDashboardScreenProps> = ({
             >
               <span className="material-symbols-outlined text-[24px]">arrow_back</span>
             </button>
-            <img
-              alt="ProTick Exam Portal Emblem"
-              className="h-8 w-auto object-contain"
-              src="https://lh3.googleusercontent.com/aida/ALJJyrBZUPmSIIs9p12UE4OypO1-4-kZiiutZPWOQIxV6I7V-xQ8LMlYfIFYxj1ZLo6Qii2dHxBoYDx3AkQu7YN5xWTN4iA3emSHZhl2dsHjAzNm0DA0ytHKwiUE3zwisjgv_3XDGt6iFNUkjWNHDEojfpodXd3m0pRDdXljP8pmzMjv5Sc33nKfEfBpKrcP_wgrVTczPO-ywC1v1Lgv8X1kfCc89zKX6RIrLMefY23Sg84V"
-            />
+            <ProTickLogo className="w-8 h-8" />
             <div className="flex flex-col">
               <div className="flex items-center gap-space-xs">
                 <span className="font-headline-sm text-headline-sm font-bold tracking-tight text-on-primary leading-none">
@@ -103,6 +100,9 @@ export const ReviewDashboardScreen: React.FC<ReviewDashboardScreenProps> = ({
                 className="w-14 h-14 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm border border-outline-variant/30"
                 alt="Candidate"
                 src={student.avatarUrl}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23dce9ff"/><circle cx="50" cy="38" r="20" fill="%234059aa"/><path d="M20 85 C20 65, 35 60, 50 60 C65 60, 80 65, 80 85 Z" fill="%234059aa"/></svg>';
+                }}
               />
               <div className="flex flex-col min-w-0">
                 <h2 className="font-headline-sm text-headline-sm font-bold text-on-surface truncate">

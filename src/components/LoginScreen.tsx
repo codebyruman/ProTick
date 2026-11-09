@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StudentProfile } from '../types/exam';
+import { ProTickLogo } from './ProTickLogo';
 
 interface LoginScreenProps {
   student: StudentProfile;
@@ -34,12 +35,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ student, onLoginSucces
       <div className="flex flex-col w-full px-margin-mobile py-space-md max-w-xl mx-auto my-auto">
         {/* Header Branding */}
         <header className="flex flex-col items-center text-center space-y-space-xs mb-space-md">
-          <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-surface-container shadow-sm p-space-xs mb-space-xs">
-            <img
-              alt="ProTick Exam Portal Emblem"
-              className="w-12 h-12 object-contain"
-              src="https://lh3.googleusercontent.com/aida/ALJJyrBZUPmSIIs9p12UE4OypO1-4-kZiiutZPWOQIxV6I7V-xQ8LMlYfIFYxj1ZLo6Qii2dHxBoYDx3AkQu7YN5xWTN4iA3emSHZhl2dsHjAzNm0DA0ytHKwiUE3zwisjgv_3XDGt6iFNUkjWNHDEojfpodXd3m0pRDdXljP8pmzMjv5Sc33nKfEfBpKrcP_wgrVTczPO-ywC1v1Lgv8X1kfCc89zKX6RIrLMefY23Sg84V"
-            />
+          <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-surface-container shadow-sm p-1.5 mb-space-xs">
+            <ProTickLogo className="w-12 h-12" />
           </div>
           <div className="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm">
             <span className="w-2 h-2 rounded-full bg-secondary"></span>

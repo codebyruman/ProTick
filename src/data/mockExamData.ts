@@ -15,7 +15,7 @@ export const initialStudentProfile: StudentProfile = {
   labName: 'WS-19 • Hall B (Computer Center 2)',
   proctorName: 'Prof. K. Venkatesh',
   proctorId: 'INV-8820',
-  avatarUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhETaJw9-gEWR1PHe6RZ_qUFnHR3xxzlY_UnJY_TXgMR1qZRZaTdmelYNtOMrhgLlegXCi-qpiZrU6Vb3qKeboJmmjjnhzhFsT_qjpEtE7pcZuywuyaeLXJEEfwhRvA20qLFyRRvcnEN5wOzKOmYDwR1cpkJHBrD9wW3aywReeNLlkPmG9CQMQcl8NesebNSn6CLAGLOHtn7zRuwzPBVKBhQKnxcw7xzzrYAy1FOM'
+  avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250',
 };
 
 export const examQuestions: Question[] = [

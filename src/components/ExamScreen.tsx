@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Question, StudentProfile } from '../types/exam';
+import { ProTickLogo } from './ProTickLogo';
 
 interface ExamScreenProps {
   student: StudentProfile;
@@ -107,11 +108,7 @@ export const ExamScreen: React.FC<ExamScreenProps> = ({
             >
               <span className="material-symbols-outlined text-[24px]">arrow_back</span>
             </button>
-            <img
-              alt="ProTick Exam Portal Emblem"
-              className="h-8 w-auto object-contain"
-              src="https://lh3.googleusercontent.com/aida/ALJJyrBZUPmSIIs9p12UE4OypO1-4-kZiiutZPWOQIxV6I7V-xQ8LMlYfIFYxj1ZLo6Qii2dHxBoYDx3AkQu7YN5xWTN4iA3emSHZhl2dsHjAzNm0DA0ytHKwiUE3zwisjgv_3XDGt6iFNUkjWNHDEojfpodXd3m0pRDdXljP8pmzMjv5Sc33nKfEfBpKrcP_wgrVTczPO-ywC1v1Lgv8X1kfCc89zKX6RIrLMefY23Sg84V"
-            />
+            <ProTickLogo className="w-8 h-8" />
             <div className="flex flex-col">
               <div className="flex items-center gap-space-xs">
                 <span className="font-headline-sm text-headline-sm font-bold tracking-tight text-on-primary leading-none">
